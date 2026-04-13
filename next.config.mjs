@@ -5,16 +5,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.moontraces.com' }],
-        destination: 'https://moontraces.com/:path*',
-        permanent: true,
-      },
-    ]
-  },
   turbopack: {
     root: __dirname,
   },

@@ -29,7 +29,7 @@ If `NEXT_PUBLIC_SITE_URL` is **unset**, the app falls back to `VERCEL_URL` on Ve
 ## DNS and HTTPS (outside this repo)
 
 - Point the **apex** domain `moontraces.com` (and optionally `www`) to your host; enable HTTPS at the edge.
-- If `www.moontraces.com` is used, `next.config.mjs` includes a permanent redirect to the apex so the canonical host stays consistent.
+- **www ↔ apex** redirects are **not** defined in this app. Configure canonical host redirects only in **Vercel** (Domains) and/or **Cloudflare** (or your DNS/CDN) so they do not conflict with each other or with “Always Use HTTPS” / flexible SSL modes that can cause redirect loops.
 
 ## Code reference
 
